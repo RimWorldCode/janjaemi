@@ -9,6 +9,14 @@
     <meta name="description" content="문서에 대한 설명" />
     <meta name="keywords" content="문서 검색, 혹은 문서설명의 대표 키워드" />
     <meta name="author" content="js kim" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jua&family=Open+Sans:ital,wght@0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
     <!--작가-->
     <style>
       body {
@@ -23,9 +31,38 @@
         background-position: center center;
         background-color: lightpink;
       }
+      .text1 {
+        font-size: 1rem;
+        line-height: 32px;
+        text-align: left;
+      }
+      .text2 {
+        display: inline-block;
+        font-size: 1rem;
+        font-style: italic;
+        line-height: 1rem;
+        text-align: justify;
+      }
+      .jua-font {
+        font-family: "Jua", sans-serif;
+      }
     </style>
   </head>
   <body>
-    <div>아기다리고기다리던</div>
+    <div>
+      <span class="jua-font text1"
+        >아기다리고기다리던아기다리고기다리던아기다리고기다리던아기다리고기다리던아기다리고기다리던아기다리고기다리던아기다리고기다리던</span
+      ><span class="text2"
+        >Color theme creation The baseline Material color theme Material Design
+        comes designed with a built-in, baseline theme that can be used as-is,
+        straight out of the proverbial box. It includes default colors for:...
+        Material Design comes designed with a built-in, baseline theme that can
+        be used as-is, straight out of the proverbial box. This includes default
+        colors for: Primary and secondary colors Variants of primary and
+        secondary colors Additional UI colors, such as colors for backgrounds,
+        surfaces, errors, typography, and iconography. All of these colors can
+        be customized for your app.</span
+      >
+    </div>
   </body>
 </html>

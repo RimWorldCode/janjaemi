@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!--익스플로러 호환성-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--반응형 웹 관련 태그 vietport : 화면에 보여지는 부분들-->
+    <meta name="description" content="문서에 대한 설명" />
+    <meta name="keywords" content="문서 검색, 혹은 문서설명의 대표 키워드" />
+    <meta name="author" content="js kim" />
+    <style>
+      body {
+        height: 1000vh;
+      }
+      .box1 {
+        position: relative;
+        top: 10px;
+        left: 100px;
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+        transition-property: background-color, width;
+        transition-duration: 2s;
+        transition-timing-function: ease;
+      }
+      .box1:hover {
+        background-color: white;
+        width: 100%;
+      }
+      .box2 {
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        width: 100px;
+        height: 100px;
+        background-color: tomato;
+        overflow: visible;
+      }
+      .box3 {
+        position: absolute;
+        top: 100px;
+        left: 100px;
+        width: 100px;
+        height: 100px;
+        background-color: lightgoldenrodyellow;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .box4 {
+        width: 100px;
+        height: 100px;
+        background-color: lightsalmon;
+        overflow: scroll;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="box1">
+      h1
+      <div class="box2">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper
+        diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat
+        tellus diam, consequat gravida libero rhoncus ut. Maecenas imperdiet
+        felis nisi, fringilla luctus felis hendrerit sit amet.
+      </div>
+      <div class="box3">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper
+        diam at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat
+        tellus diam, consequat gravida libero rhoncus ut. Maecenas imperdiet
+        felis nisi, fringilla luctus felis hendrerit sit amet.
+      </div>
+    </div>
+    <div class="box4">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam semper diam
+      at erat pulvinar, at pulvinar felis blandit. Vestibulum volutpat tellus
+      diam, consequat gravida libero rhoncus ut. Maecenas imperdiet felis nisi,
+      fringilla luctus felis hendrerit sit amet.
+    </div>
+    <!--부모 요소중 relative한 요소가 없으므로 body를 기준으로 position을 조정 가능하다-->
+  </body>
+</html>
