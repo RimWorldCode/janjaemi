@@ -27,8 +27,8 @@
 
       section span {
         font-size: 30px;
-      } /*모든 섹션안에 모든 스팬(하위태그)인 모두 지정 어디에 있든, 
-        부모 자식이든 손자든, 섹션 안에 있는 모든 후손 span*/
+      } /*모든 섹션안에 모든 스팬(하위태그)인 모두 지정 어디에 있든,
+         부모 자식이든 손자든, 섹션 안에 있는 모든 후손 span*/
       .sec1 > article {
         font-size: 50px;
       } /* sec1 클래스의 자식*/
@@ -53,6 +53,47 @@
       input[type="checkbox"]:checked + span {
         color: tomato;
       }
+      .child article:nth-child(2n) {
+        color: blue;
+      }
+      .child article:nth-child(2n-1) {
+        color: red;
+      }
+
+      #art1::first-letter {
+        font-size: 100px;
+      }
+      #art1::before {
+        content: "부야";
+      }
+
+      #art1::after {
+        content: "호야";
+      }
+      #art1::selection {
+        color: tomato;
+        background-color: lightyellow;
+      }
+      /*nth-child(2n) = nth-last-child(2n-1)
+       nth-child(2n-1) = nth-last-child(2n)*/
+
+      /*필요 태그만 모아서 숫자를 매기고 싶으면
+      .chile article:first-of-type
+      .chile article:nth-of-type(2n)
+      .chile article:nth-of-type(2n-1) 처럼 쓰면된다 */
+
+      .child article:not(.onlyone) {
+        background-color: aqua;
+      } /* .child의 article태그들중 onlyone class가 아닌 애들에게 적용*/
+      .box {
+        width: 100px;
+        height: 40px;
+        color: lightpink;
+        background-color: lightgoldenrodyellow;
+        margin: auto;
+        padding: 10px;
+        text-align: center;
+      }
     </style>
     <title>문서 제목</title>
   </head>
@@ -70,9 +111,13 @@
       <article><span>해다르다</span></article>
       <article class="art4"><span>힝다르다</span></article>
     </section>
-    <section>
-      <article></article>
-      <article></article>
+    <section class="child">
+      <article>홀</article>
+      <article>짝</article>
+      <article class="onlyone">홀</article>
+      <article>짝</article>
+      <article>홀</article>
+      <article>짝</article>
     </section>
     <section>
       <article></article>
@@ -89,5 +134,6 @@
     </form>
     <aside>오른사이드바</aside>
     <footer></footer>
+    <div class="box">오른은 왼손도 오른손</div>
   </body>
 </html>

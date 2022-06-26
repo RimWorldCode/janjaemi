@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!--익스플로러 호환성-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--반응형 웹 관련 태그 vietport : 화면에 보여지는 부분들-->
+    <meta name="description" content="문서에 대한 설명" />
+    <meta name="keywords" content="문서 검색, 혹은 문서설명의 대표 키워드" />
+    <meta name="author" content="js kim" />
+    <title>Document</title>
+    <style>
+      .main-screen {
+        max-width: 400px;
+        /*그냥 width 1200px해버리면 가로로 스크롤이 생김
+        max를 적용하면 브라우저 크기에따라 자동조절*/
+        height: 100px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 10px;
+        border: 10px outset rgba(255, 255, 255, 0.5);
+        border-radius: 5px;
+        box-shadow: 0 0 0 2rem skyblue;
+        outline: 0.5rem solid khaki;
+        outline-offset: 5px;
+        box-sizing: border-box;
+        /*400px = content width -> border-box
+        400px = padding+border+content*/
+        background-color: lightgoldenrodyellow;
+        overflow: hidden;
+      }
+      body {
+        height: 100vh;
+        background-image: url("https://th.bing.com/th/id/OIP.EjU06eGJhor4Q-TFZKmsQgHaEx?w=274&h=180&c=7&r=0&o=5&pid=1.7"),
+          url("https://t1.daumcdn.net/cfile/tistory/133022365017F9FE10");
+        /*background-image는 겹칠수도 있다*/
+        background-size: contain, cover;
+        background-repeat: no-repeat, repeat;
+        /*background-repeat: 가로(x) 세로(y); 
+          background-repeat: 첫번째이미지, 두번째이미지 -> background-image가 2개*/
+      }
+    </style>
+  </head>
+  <body>
+    <div class="backgroimg"></div>
+    <div class="main-screen">
+      CodeSandbox: Online Code Editor and IDE for Rapid Web …
+      https://codesandbox.io 2022. 6. 16. · made easy. and keep development work
+      flowing. Quickly create real, working prototypes. Test ideas earlier and
+      iterate more. Use code, apps, and templates collectively. Learn from each
+      other and bake-in best practice. Give and get feedback, on code or … Sign
+      In CodeSandbox is an online editor tailored for web applications. Join
+      millions of people … Pricing Pricing - CodeSandbox. CodeSandbox is an
+      online code editor and prototyping tool … Jobs 4 Our Values. Everything we
+      do at CodeSandbox derives from our values. … Prototyping Prototyping -
+      CodeSandbox. CodeSandbox is an online code editor and prototyping … Search
+      Sandboxes CodeSandbox is an online editor tailored for web applications.
+      CodeSandbox is an … Podcasts Podcasts Level up by listening to podcasts
+      from the best in the industry. Product; … Individuals Personal Plan -
+      CodeSandbox. CodeSandbox is an online code editor …
+    </div>
+  </body>
+</html>
