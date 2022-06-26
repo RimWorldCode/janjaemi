@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!--익스플로러 호환성-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--반응형 웹 관련 태그 vietport : 화면에 보여지는 부분들-->
+    <meta name="description" content="문서에 대한 설명" />
+    <meta name="keywords" content="문서 검색, 혹은 문서설명의 대표 키워드" />
+    <meta name="author" content="js kim" />
+    <!--작가-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <!--normalize cdnjs 리셋css-->
+    <title>문서 제목</title>
+    <style>
+      * {
+        color: blue;
+      }
+      div {
+        height: 20px;
+        width: 100%;
+        opacity: 0.5;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#" target="_blank"></a>
+    <!--새창에 띄움 blank-->
+    <a href="#" target="_self"></a>
+    <!--현재 창에 띄움 blank-->
+    <!-- <img src="#.jpg" alt="이미지 설명" />-->
+    <!--alt 속성을 사용하여 이미지 설명을 넣을것을 권장-->
+    <table>
+      <thead>
+        <tr>
+          <!--행-->
+          <td colspan="2">제목열1</td>
+          <!--colspan 여러 열column에 걸친 행row병합하여 열column 확대-->
+          <!--열-->
+          <td>제목열2</td>
+        </tr>
+      </thead>
+      <!--제목행-->
+      <tbody>
+        <tr>
+          <td rowspan="2">내용열1</td>
+          <!--rowspan 여러행row에 걸친 열column병합하여 행row 확대-->
+          <td>내용열2</td>
+        </tr>
+        <tr>
+          <td style="font-size: 2rem">내용열1</td>
+          <td style="font-size: 2rem">내용열2</td>
+        </tr>
+      </tbody>
+      <!--내용행-->
+      <tfoot style="font-size: 2em">
+        <tr>
+          <td style="font-size: 2em">마지막열1</td>
+          <td>마지막열2</td>
+        </tr>
+      </tfoot>
+      <!--마지막행-->
+    </table>
+    <form action="#" method="post" name="좋아요1">
+      <button>좋아요</button>
+      <input type="button" value="좋아요" name="좋아요2" />
+      <input type="text" placeholder="그렇군" autocomplete="on" required />
+    </form>
+    <!--action url작성 method url의 방식 post or get-->
+    <!--autocomplete 자동완성기능-->
+    <div style="background-color: blueviolet"></div>
+    <div style="background-color: red"></div>
+  </body>
+</html>

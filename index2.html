@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!--익스플로러 호환성-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--반응형 웹 관련 태그 vietport : 화면에 보여지는 부분들-->
+    <meta name="description" content="문서에 대한 설명" />
+    <meta name="keywords" content="문서 검색, 혹은 문서설명의 대표 키워드" />
+    <meta name="author" content="js kim" />
+    <!--작가-->
+    <style>
+      .sec1 {
+        color: red;
+      }
+      .sec2 {
+        color: blue;
+      }
+      .sec1 #art1 {
+        color: aqua;
+      }
+
+      article.art3.main1.main2#main3 {
+        color: brown;
+      } /*선택자를 중첩해서 특정화*/
+
+      section span {
+        font-size: 30px;
+      } /*모든 섹션안에 모든 스팬(하위태그)인 모두 지정 어디에 있든, 
+        부모 자식이든 손자든, 섹션 안에 있는 모든 후손 span*/
+      .sec1 > article {
+        font-size: 50px;
+      } /* sec1 클래스의 자식*/
+
+      .art3 + article {
+        background-color: aqua;
+      } /*.art3와 같은 촌수(형제)이면서 바로뒤에 있는 article태그*/
+
+      .art3 ~ .art4 {
+        background-color: yellow;
+        /* .art3와 형제 이면서 바로뒤가 아니어도 중간에 뭐가 있어도 형제인 art4*/
+      }
+      input[type="button"]:disabled {
+        color: aqua;
+      }
+      input[type="button"]:enabled {
+        color: tomato;
+      }
+      input[type="checkbox"] + span {
+        color: teal;
+      }
+      input[type="checkbox"]:checked + span {
+        color: tomato;
+      }
+    </style>
+    <title>문서 제목</title>
+  </head>
+  <body>
+    <!--이러한 시맨틱웹 tag들은 의미를 부여하는 역할-->
+    <header></header>
+    <nav>네비게이션바</nav>
+    <aside>왼사이드바</aside>
+    <section class="sec1">
+      <article id="art1">아다르고1</article>
+      <article id="art2"><span>어다르다2</span></article>
+    </section>
+    <section class="sec2">
+      <article class="art3 main1 main2" id="main3">우다르고</article>
+      <article><span>해다르다</span></article>
+      <article class="art4"><span>힝다르다</span></article>
+    </section>
+    <section>
+      <article></article>
+      <article></article>
+    </section>
+    <section>
+      <article></article>
+      <article></article>
+    </section>
+    <form action="#">
+      <input type="text" />
+      <input type="submit" />
+      <input type="checkbox" /><span>체크1</span>
+    </form>
+    <form action="#">
+      <input type="button" value="버튼2" disabled="true" />
+      <input type="button" value="버튼2" />
+    </form>
+    <aside>오른사이드바</aside>
+    <footer></footer>
+  </body>
+</html>
